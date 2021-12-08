@@ -1,0 +1,36 @@
+server:
+  port: 80
+
+spring:
+  profiles:
+    include: oauth, database
+
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    cache: false
+
+  resources:
+    static-locations: file:src/main/resources/static/
+
+  devtools:
+    livereload:
+      enabled: true
+
+  servlet:
+    multipart:
+      maxFileSize: 20MB
+      maxRequestSize: 100MB
+
+  #main:
+  #  allow-bean-definition-overriding: true
+
+itemImgLocation: /Users/tmdwns/Desktop/develop/shop/item
+uploadPath: file:////Users/tmdwns/Desktop/develop/shop/
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
