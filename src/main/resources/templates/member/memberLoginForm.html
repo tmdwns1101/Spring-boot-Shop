@@ -28,11 +28,24 @@
         <div style="text-align: center">
             <button type="submit" class="btn btn-primary" style="">로그인</button>
         </div>
-
-        <button type="button" class="btn btn-primary" onClick="location.href='/members/signup'">SIGN UP</button>
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
     </form>
-    <button class="btn btn-warning" onclick="location.href='/oauth2/authorize/kakao'">카카오 로그인</button>
+    <div class="container border-top border-2 p-4 mt-2">
+        <div class="row gx-5">
+            <div class="col">
+                <button class="btn btn-warning" style="width: 100%;" onclick="location.href='/oauth2/authorize/kakao'">카카오 로그인</button>
+            </div>
+            <div class="col">
+                <button class="col btn btn-danger" onclick="location.href='/oauth2/authorize/google'">
+                    <i class="fab fa-google-plus-square" ></i>
+                    <span>구글 로그인</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <button type="button" class="btn btn-primary" onClick="location.href='/members/signup'">SIGN UP</button>
+
 </div>
 
 
